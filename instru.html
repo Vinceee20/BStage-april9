@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackStage Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class= "header">
+        <nav class="navbar">
+          <a href="index.html" class="logo">BACKSTAGE</a>
+            <ul class="nav-links">
+              <li><a href="classes.html">Classes</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="studio.html">Studio Rental</a></li>
+              <li><a href="instru.html">Instructors</a></li>
+            </ul>
+        </nav>
+      </header>
+
+    <section> 
+        <div class="instructors">
+            <h6>Instructors</h6>
+        </div> 
+    </section>
+
+    <section class="slider-container">
+      <div class="slider-images">
+        <div class="slider-img">
+          <img src="/instru/chuch.jpg" alt="1" />
+          <h1>CHUCHAY</h1>
+          <div class="details">
+            <h2>CHUCHAY</h2>
+            <p>KIDS/K-POP</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="/instru/edri.jpg" alt="2" />
+          <h1>EDRIANNE</h1>
+          <div class="details">
+            <h2>EDRIANNE</h2>
+            <p>AFRO</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="/instru/melvin.jpg" alt="3" />
+          <h1>MEVLIN</h1>
+          <div class="details">
+            <h2>MEVLIN</h2>
+            <p>HIP-HOP</p>
+          </div>
+        </div>
+        <div class="slider-img active">
+          <img src="/instru/poy.jpg" alt="4" />
+          <h1>JOSH</h1>
+          <div class="details">
+            <h2>JOSH</h2>
+            <p>BEGINNER</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="/instru/rus.jpg" alt="5" />
+          <h1>RUSSEL</h1>
+          <div class="details">
+            <h2>RUSSEL</h2>
+            <p>OPEN</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="/instru/sean.jpg" alt="6" />
+          <h1>SEAN</h1>
+          <div class="details">
+            <h2>SEAN</h2>
+            <p>FEMME/K-POP/KIDS</p>
+          </div>
+        </div>
+        <div class="slider-img">
+          <img src="/instru/yen.jpg" alt="7" />
+          <h1>YEN</h1>
+          <div class="details">
+            <h2>YEN</h2>
+            <p>FEMME/CHAIRS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    <section> 
+      <div class="instructors">
+          <h5>Instructors</h5>
+      </div> 
+  </section>
+  
+
+    <script src="js/jQuery.js"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".slider-img").on("click", function () {
+          $(".slider-img").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
+    </script>
+
+    
+</body>
+</html>

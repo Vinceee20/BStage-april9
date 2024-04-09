@@ -1,0 +1,381 @@
+@font-face{
+    font-family: badaFont;
+    src: url(/fonts/BADABB__.TTF);
+}
+.header {
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    background: rgba(0, 0, 0, 0.1);
+}
+a {
+    text-decoration: none; /* Removes underline */
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    background-color: #d4d4d4; /* Adjust the color code as needed */
+}
+/* Navbar -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+ul {
+    list-style: none;
+}
+.logo {
+    margin-left: 50px;
+    margin-top: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-family: badaFont;
+    text-shadow: 
+    -1px -1px 0 #000000,  
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     1px  1px 0 #000000; /* White stroke */
+     letter-spacing: 4px; /* Adjust the spacing as needed */   
+     
+}
+.navbar a:hover {
+        color: #000000; /* Optional: change for hover effect */
+        transition: color 0.3s ease; /* Smooth transition */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Set navbar position to fixed */
+    top: 0; /* Stick to the top of the page */
+    left: 0;
+    width: 64%;
+    padding: 20px;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-top: 3px;
+    font-family: badaFont;
+    letter-spacing: 2px; /* Adjust the spacing as needed */
+}
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Optional: removes the underline */
+    padding: 0 25px; /* Optional: adds some space around the links */
+}
+.nav-links a:hover {
+    color: #000000; /* Optional: change for hover effect */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+/* VIDEO -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89%;
+    z-index: -100;
+    object-fit: cover; /* This will make sure the video covers the entire area without stretching */
+}
+/* TITLES -------------------------------------------------------------------------------------------------------------------------*/
+.eventitle {
+    margin-top: 91.5vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 150px; /* Adjust this value as needed */
+}
+.eventitle a {
+    color: #ffffff; /* Adjust the color as needed */
+     font-size: 25px;
+     font-family: badaFont;
+     letter-spacing: 8px; /* Adjust the spacing as needed */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+.eventitle a:hover {
+    color: #000000; /* Change text color to black on hover */
+    background-color: #e6e6e6; /* Darken background color on hover */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for both color and background */
+}
+.eventitle{
+    background-color: #000000;
+    background-size: 200px 150px; /* Adjust the background size as needed */
+    display: inline-block; /* Ensure the background covers the entire anchor element */
+    padding: 20px 120px; /* Add padding to create space around the text */
+}
+/* Carousel Section  -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.carousel {
+    margin-top: 4vh;
+    margin-left: 2.5%; 
+    width: 30%; /* Adjust this value as needed */
+    height: 100%; /* This will maintain the aspect ratio */
+    
+}
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+ul.slides input {
+    display: none; 
+}
+.slide-container { 
+    display: block; 
+}
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+.carousel-controls label:hover {
+    opacity: 1;
+}
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6,
+input#img-7:checked ~ .carousel-dots label#img-dot-7
+ {
+	opacity: 1;
+}
+input:checked + .slide-container .nav label { display: block; }
+/* Instructors Section  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.instructors h5 {
+    font-size: 50px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #000000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 795px; /* Adjust this value as needed */
+}
+.slider-container{
+    width: 100%;
+    height: 110vh;
+    background-image: url('/instru/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  .slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  .slider-img{
+    width: 110px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+  }
+  .slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+    height: 480px;
+  }
+  .slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(6){
+    height: 560px;
+  }
+  .slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+    height: 665px;
+  }
+  h1{
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: rotate(270deg);
+    transition: 0.7s ease;
+  }
+  .details{
+    position: absolute;
+    bottom: 43px;
+    left: 43px;
+  }
+  .details h2{
+    font-family: "Jost", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 44px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+  }
+  .details p{
+    font-family: "Jost", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 33px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.7s ease;
+    display: none;
+  }
+  .slider-img.active{
+    width: 766px !important;
+    height: 750px !important;
+  }
+  .slider-img.active h1{
+     display: none;
+  }
+  .slider-img.active .details p, .slider-img.active .details h2{
+    display: block;
+  }
+
+/* CLASSES.HTML-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.classes h6 {
+    font-size: 100px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #000000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 795px; /* Adjust this value as needed */
+}
+/* EVENTS.HTML-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.events h6 {
+    font-size: 100px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #000000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 795px; /* Adjust this value as needed */
+}
+/* INSTRUCTORS.HTML-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.instructors h6 {
+    font-size: 100px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #000000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    padding: 0 595px; /* Adjust this value as needed */
+}
+/* STUDIO RENTAL.HTML-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.studiorental h6 {
+    font-size: 100px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #000000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 795px; /* Adjust this value as needed */
+}
+/* Profiles.HTML-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.profiles h2 {
+    font-size: 50px; /* Adjust as needed */
+    font-family: badaFont;
+    color: #ff0000; /* Adjust the color as needed */
+    margin-top: 10vh; /* Adjust this value as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 795px; /* Adjust this value as needed */
+}
