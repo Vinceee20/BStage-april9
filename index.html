@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class= "header">
+<header class= "header">
         <nav class="navbar">
           <a href="index.html" class="logo">BACKSTAGE</a>
             <ul class="nav-links">
@@ -18,30 +18,35 @@
               <li><a href="instru.html">Instructors</a></li>
             </ul>
         </nav>
-      </header>
-      <section>
-        <video autoplay loop muted playsinline id="backgroundVideo">
-            <source src="/img/bg2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-      </section>
+</header>
 
-    <section> 
-        <div class="eventitle">
-            <h2><a href="events.html">EVENTS</a></h2>
-        </div> 
-    </section>
+  <section>
+    <video autoplay loop muted playsinline id="backgroundVideo">
+      <source src="/img/bg2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
 
+
+<main>
+  <section>
+    <div class="events">
+      <h2><a href="events.html">EVENTS</a></h2>
+    </div> 
+  </section>
+
+
+  
     <div>
         <div class="carousel">
           <ul class="slides">
             <input type="radio" name="radio-buttons" id="img-1" checked />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/BEGINNERS.jpg">
+                <img src="/events/eventbg.jpg">
               </div>
               <div class="carousel-controls">
-                <label for="img-7" class="prev-slide">
+                <label for="img-11" class="prev-slide">
                   <span>&lsaquo;</span>
                 </label>
                 <label for="img-2" class="next-slide">
@@ -52,7 +57,7 @@
             <input type="radio" name="radio-buttons" id="img-2" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/FEMME.jpg">
+                <img src="/events/eventbg2.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-1" class="prev-slide">
@@ -66,7 +71,7 @@
             <input type="radio" name="radio-buttons" id="img-3" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/HIPHOP.jpg">
+                <img src="/events/eventbg3.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-2" class="prev-slide">
@@ -80,7 +85,7 @@
             <input type="radio" name="radio-buttons" id="img-4" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/K-POP.jpg">
+                <img src="/events/eventbg4.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-3" class="prev-slide">
@@ -94,7 +99,7 @@
             <input type="radio" name="radio-buttons" id="img-5" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/STYLES.jpg">
+                <img src="/events/eventbeg.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-4" class="prev-slide">
@@ -108,7 +113,7 @@
             <input type="radio" name="radio-buttons" id="img-6" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/OPEN.jpg">
+                <img src="/events/eventfem.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-5" class="prev-slide">
@@ -122,10 +127,66 @@
             <input type="radio" name="radio-buttons" id="img-7" />
             <li class="slide-container">
               <div class="slide-image">
-                <img src="/classes/KIDS.jpg">
+                <img src="/events/eventkid.jpg">
               </div>
               <div class="carousel-controls">
                 <label for="img-6" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-8" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-8" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/events/eventhip.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-7" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-9" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-9" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/events/eventstyle.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-8" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-10" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-10" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/events/eventkpop.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-9" class="prev-slide">
+                  <span>&lsaquo;</span>
+                </label>
+                <label for="img-11" class="next-slide">
+                  <span>&rsaquo;</span>
+                </label>
+              </div>
+            </li>
+            <input type="radio" name="radio-buttons" id="img-11" />
+            <li class="slide-container">
+              <div class="slide-image">
+                <img src="/events/eventopen.jpg">
+              </div>
+              <div class="carousel-controls">
+                <label for="img-10" class="prev-slide">
                   <span>&lsaquo;</span>
                 </label>
                 <label for="img-1" class="next-slide">
@@ -141,19 +202,23 @@
               <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
               <label for="img-6" class="carousel-dot" id="img-dot-6"></label>
               <label for="img-7" class="carousel-dot" id="img-dot-7"></label>
+              <label for="img-8" class="carousel-dot" id="img-dot-8"></label>
+              <label for="img-9" class="carousel-dot" id="img-dot-9"></label>
+              <label for="img-10" class="carousel-dot" id="img-dot-10"></label>
+              <label for="img-11" class="carousel-dot" id="img-dot-11"></label>
             </div>
           </ul>
         </div>
-      </div>
-      
+    </div>
+  
 
 
 
-    <section> 
-        <div class="instructors">
-            <h5>Instructors</h5>
-        </div> 
-    </section>
+  <section> 
+    <div class="instructors">
+      <h5>Instructors</h5>
+    </div> 
+  </section>
 
     <section class="slider-container">
       <div class="slider-images">
@@ -226,6 +291,9 @@
   
 
     <script src="js/jQuery.js"></script>
+
+     
+
     <script>
       jQuery(document).ready(function ($) {
         $(".slider-img").on("click", function () {
@@ -235,6 +303,7 @@
       });
     </script>
 
-    
+</main>
+
 </body>
 </html>
