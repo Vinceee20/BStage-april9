@@ -228,6 +228,8 @@ input#img-11:checked ~ .carousel-dots label#img-dot-11
 }
 input:checked + .slide-container .nav label { display: block; }
 
+
+
 /* Instructors Section  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .instructors h5 {
     font-size: 50px; /* Adjust as needed */
